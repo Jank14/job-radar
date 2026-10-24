@@ -1,0 +1,279 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Job Radar — tuned for Vaishnavi Khindkar (MS Computer Vision, CMU RI, Dec 2026)
+# Every fact in `candidate.evidence` is copied from her CV (Oct 2026) or from her own
+# corrections in her job-search chat. Drafted emails only ever use these lines,
+# so keep them true: edit here, never in the generated drafts.
+# ─────────────────────────────────────────────────────────────────────────────
+
+candidate:
+  profile:
+    name: Vaishnavi Khindkar
+    first_name: Vaishnavi
+    email: vkhindka@andrew.cmu.edu
+    website: https://vaishnvi.github.io/
+    linkedin: https://www.linkedin.com/in/vaishnavi-khindkar
+    github: https://github.com/Vaishnvi
+    degree_line: MS in Computer Vision at Carnegie Mellon University's Robotics Institute (graduating December 2026)
+    degree_short: MS Computer Vision, CMU RI (Dec 2026)
+    experience_line: ~5 years of research experience in computer vision, 3D reconstruction, and generative AI
+    work_authorization: >-
+      I'm on an F-1 visa and will be authorized to work in the US on OPT after graduating in December 2026.
+      I will require visa sponsorship in the future.
+    needs_sponsorship_answer: "Yes"
+    graduation: December 2026
+
+  # Proof points. `keywords` are matched against the job title + description; a title hit counts double.
+  # `text` goes into cold emails; `short` into 300-character LinkedIn notes.
+  evidence:
+    - id: sync
+      label: Sync Labs VLM quality control
+      keywords: [vision-language, vlm, multimodal, multi-modal, fine-tun, post-train, lora, peft, llm, qwen, video generation,
+                 generative video, lip-sync, video, evaluation, evals, judge, artifact, data curation, h100, h200]
+      short: fine-tuned a 27B VLM for AI-video quality control at Sync Labs (macro-F1 0.19→0.49)
+      text: >-
+        This summer, as an ML Engineering intern at Sync Labs, I built an automated visual quality-control system for AI
+        lip-sync video: a fine-tuned vision-language model judges appearance defects while classical CV (sharpness,
+        plate-difference maps, optical flow) handles geometry and motion. I fine-tuned Qwen 3.6-27B with a single multi-task
+        LoRA adapter (124M parameters) on 8×H200 GPUs, raising QC macro-F1 from 0.19 to 0.49 and beating GPT-5.6-sol
+        zero-shot (0.30).
+    - id: eccv
+      label: ECCV 2026 detector diagnosis
+      keywords: [object detection, detector, detection, perception, robustness, failure, diagnos, synthetic data,
+                 generative, imagen, diffusion, aerial, evaluation, data engine, edge case]
+      short: co-authored ECCV 2026 work using generative models to diagnose object detectors
+      text: >-
+        I'm a co-author on an ECCV 2026 paper that turns foundation image generative models (Imagen-3) into a diagnostic
+        tool for aerial object detectors, enabling fine-grained failure analysis and up to 11% AP50 gains.
+    - id: slot4d
+      label: Slot4D 4D reconstruction (capstone)
+      keywords: [3d, 4d, reconstruction, scene understanding, spatial, world model, vggt, geometry, geometric, depth,
+                 multi-view, multiview, object-centric, slot, point cloud, slam, structure from motion, nerf, gaussian]
+      short: built Slot4D, an object-centric 4D reconstruction head on VGGT (up to 4× better surface reconstruction)
+      text: >-
+        My CMU capstone, Slot4D, adds an adaptive slot-attention head over VGGT features that decomposes scenes into
+        object slots and masks; slot-conditioned refinement gives up to 4× better surface reconstruction on CO3D, ScanNet,
+        and Virtual KITTI, and I'm extending it to streaming 4D.
+    - id: reward
+      label: Reward-tilted sampling (Risteski)
+      keywords: [diffusion, flow matching, sampling, reward, guidance, generative model, image generation, rlhf,
+                 reinforcement learning, alignment, inference-time, test-time, score-based, post-training]
+      short: research reward-tilted sampling for generative models with Prof. Andrej Risteski
+      text: >-
+        As a Graduate Research Fellow with Prof. Andrej Risteski in CMU's Machine Learning Department, I study
+        reward-tilted sampling: principled lift-and-tilt methods for steering generative models toward target
+        distributions under complex, indefinite rewards.
+    - id: bhashini
+      label: Bhashini Triton deployment
+      keywords: [deploy, production, inference, serving, triton, latency, docker, kubernetes, mlops, ocr, document,
+                 model optimization, throughput, gpu, tensorrt, onnx, real-time, realtime, forward deployed]
+      short: deployed OCR for 22 languages on NVIDIA Triton at real-time latency
+      text: >-
+        At Bhashini (Government of India), I containerized OCR models with Docker and deployed them on NVIDIA Triton at
+        real-time latency (0.11 s printed, 0.051 s handwritten) across 22 Indian languages.
+    - id: cvit
+      label: CVIT research (IROS, WACV, patent)
+      keywords: [autonomous driving, self-driving, autonomous vehicle, autonomy, pedestrian, intent, prediction,
+                 trajectory, domain adaptation, adas, av, motion forecasting]
+      short: led pedestrian-intent research (IROS 2024) and domain-adaptive detection (WACV 2022)
+      text: >-
+        Over three years as a Jr. Research Scientist at CVIT, IIIT Hyderabad, I led MindReaD, reason-enriched pedestrian
+        intent estimation (IROS 2024; new PIE++ dataset, +5.6% accuracy and +7% F1 over baselines), and developed ILLUME,
+        a self-attention-based domain-adaptive object detector (WACV 2022). I also hold a granted US patent on adaptive
+        object detection.
+    - id: gsplat
+      label: Cross-resolution Gaussian Splatting
+      keywords: [gaussian splat, 3dgs, splatting, neural rendering, novel view, nerf, rendering, photogrammetry,
+                 graphics, radiance field]
+      short: built a cross-resolution 3D Gaussian Splatting pipeline
+      text: >-
+        With Prof. Shubham Tulsiani, I designed a cross-resolution 3D Gaussian Splatting pipeline that fuses heterogeneous
+        image sources, with detail-preserving densification for high-fidelity reconstruction.
+    - id: robot
+      label: Robot pose estimation
+      keywords: [robot, robotics, manipulation, humanoid, embodied, pose estimation, keypoint, sim2real, sim-to-real,
+                 domain randomization, physical ai]
+      short: built single-view robot pose estimation with sim-to-real transfer
+      text: >-
+        With Prof. Jun-Yan Zhu, I built a single-view robot pose and keypoint estimation pipeline with synthetic-to-real
+        transfer and domain randomization for unseen robot types.
+    - id: cpp
+      label: Modern C++
+      keywords: [c++, cpp, c/c++]
+      short: write Modern C++ (14/17/20) and Python
+      text: I write Modern C++ (14/17/20) as well as Python.
+
+  # Role-type weights. Computer vision first; research scientist kept low by request.
+  role_weights:
+    Computer Vision: 30
+    ML Engineer: 26
+    GenAI / LLM: 24
+    Research Engineer: 24
+    Forward Deployed: 18
+    Research Scientist: 8
+    Data Science: 2
+  # Research-scientist roles still get credit for strong topic fit (CV/3D/generative), so exact-fit
+  # researcher roles land in P2 instead of disappearing. Set 0 to keep them strictly low.
+  research_scientist_fit_bonus: 10
+
+  # ML roles outside her field: penalised unless the JD clearly matches her CV
+  off_domain_title: [security, network, business process, e-commerce, ecommerce, user growth, growth, recommendation,
+                     recsys, ranking, ads, advertising, fraud, payments, risk, vlsi, chip design, asic, compiler,
+                     solution engineer, data platform, search, finance, trust & safety]
+  off_domain_penalty: 15
+
+  level_points: {new_grad: 20, entry: 18, mid: 18, unspecified: 14}   # mid = L4-type roles she's interviewing for
+  degree: masters
+  drop_phd_only: true
+  us_only: true
+  max_years_experience: 5       # ~5 years research + 2 years SWE; senior/staff/L5+ titles are still excluded
+  include_levels: [new_grad, entry, mid, unspecified]
+  needs_sponsorship: true       # F-1 → OPT → future H-1B: drop citizenship/clearance/no-sponsorship roles
+  hide_citizenship_required: true
+  include_data_science: false
+
+# Where she already is with companies (shown as a tag on their roles). Update as things change.
+history:
+  - {company: Snap, status: closed, note: "MLE, Generative ML (L4): rejected in early round, Oct 2026"}
+  - {company: Eventual, status: closed, note: "Research Engineer, Multimodal Data: rejected in early round, Oct 2026"}
+  - {company: Apple, status: closed, note: "MLE: rejected in early round, Oct 2026"}
+  - {company: Tesla, status: closed, note: "Rejected in early round, Oct 2026"}
+  - {company: Waymo, status: closed, note: "Perception MLE + Model Optimization: rejected Sep 2026"}
+  - {company: Applied Intuition, status: closed, note: "Position filled Sep 2026"}
+
+notify:
+  timezone: Asia/Kolkata
+  digest_hours: [9, 13, 18, 22]
+  instant_priority: P1
+  instant_window: [8, 24]
+  min_priority: P2
+  max_jobs_in_email: 40
+  send_when_empty: false
+  dashboard_url: ""             # e.g. https://<username>.github.io/job-radar/ — emails then link to each role's apply kit
+
+sources:
+  company_boards: true
+  workday: true
+  amazon: true
+  simplify_new_grad: true
+  speedyapply_ai: true
+  hn_whos_hiring: true
+  yc_tags: true
+
+# Workday career sites (Snap, NVIDIA and Adobe URLs are the ones she applied through).
+workday:
+  - {name: Snap, host: wd1.myworkdaysite.com, tenant: snapchat, site: snap, url_prefix: "https://wd1.myworkdaysite.com/en-US/recruiting/snapchat/snap"}
+  - {name: NVIDIA, host: nvidia.wd5.myworkdayjobs.com, tenant: nvidia, site: NVIDIAExternalCareerSite}
+  - {name: Adobe, host: adobe.wd5.myworkdayjobs.com, tenant: adobe, site: external_experienced}
+workday_queries: [computer vision, machine learning, research engineer, perception, generative]
+amazon_queries: [computer vision, applied scientist, machine learning engineer]
+
+tiers:
+  frontier_lab:   # +30
+    [Anthropic, OpenAI, Google DeepMind, DeepMind, xAI, Thinking Machines Lab, Mistral AI, Meta Superintelligence Labs,
+     Physical Intelligence, World Labs, Reflection AI, Black Forest Labs]
+  big_tech:       # +30 — FAANG/big tech is her top priority
+    [Google, Meta, Apple, Amazon, AWS, Microsoft, Netflix, NVIDIA, Tesla, Adobe, Snap, Waymo, TikTok, ByteDance,
+     Salesforce, Uber, Qualcomm, Intel, AMD, Samsung, Sony, Bloomberg, Databricks, Pinterest, Roblox, Zoox, Aurora]
+  top_startup:    # +22 — generative video, 3D/world models, robotics, AV, AI infra (mostly from her own applications)
+    [Runway, Pika, Genmo, Hedra, Krea, Mirage, Luma AI, Midjourney, HeyGen, Tavus, Captions, Odyssey, Eventual, fal,
+     Reka, Cartesia, ElevenLabs, Hume AI, Decart, Scale AI, Snorkel AI, Labelbox, Encord, DatologyAI, Roboflow,
+     Skild AI, Figure, Apptronik, 1X, Genesis, Generalist, Menlo, Dexterity, Bedrock Robotics, Field AI, Path Robotics,
+     Toyota Research Institute, Wayve, Waabi, Kodiak, Torc Robotics, Motional, Avride, Stack AV, May Mobility, Gatik,
+     Bot Auto, Helm.ai, Applied Intuition, WeRide, Lucid, Niantic Spatial, Polycam, Meshy, Cesium, Modal, Together AI,
+     Fireworks AI, Baseten, Anysphere, Cognition, Perplexity, Cohere, Sieve, Bobyard, Monarch Tractor, Prime Intellect]
+
+# ATS boards. Slugs marked (chat) were taken from job links in her own job-search chat.
+companies:
+  # frontier labs
+  - {name: Anthropic, ats: greenhouse, slug: anthropic}                # (chat)
+  - {name: OpenAI, ats: ashby, slug: openai}                           # (chat)
+  - {name: Google DeepMind, ats: greenhouse, slug: deepmind}           # (chat)
+  - {name: xAI, ats: greenhouse, slug: xai}                            # (chat)
+  - {name: Thinking Machines Lab, ats: ashby, slug: ThinkingMachines}  # (chat)
+  - {name: Mistral AI, ats: ashby, slug: mistral.ai}                   # (chat)
+  - {name: World Labs, ats: ashby, slug: worldlabs}                    # (chat)
+  - {name: Physical Intelligence, ats: ashby, slug: physicalintelligence}  # (chat)
+  - {name: Black Forest Labs, ats: ashby, slug: black-forest-labs}     # (chat)
+  - {name: Reflection AI, ats: auto, slug: reflectionai}
+  - {name: Perplexity, ats: ashby, slug: perplexity}
+  - {name: Cohere, ats: ashby, slug: cohere}
+  # generative video / image / audio
+  - {name: Runway, ats: ashby, slug: runway-ml}                        # (chat, newest link)
+  - {name: Pika, ats: ashby, slug: pika}                               # (chat)
+  - {name: Genmo, ats: ashby, slug: genmo}                             # (chat)
+  - {name: Hedra, ats: ashby, slug: hedra}                             # (chat)
+  - {name: Krea, ats: ashby, slug: krea}                               # (chat)
+  - {name: Mirage, ats: ashby, slug: mirage}                           # (chat)
+  - {name: Midjourney, ats: ashby, slug: midjourney}                   # (chat)
+  - {name: HeyGen, ats: greenhouse, slug: heygen}                      # (chat)
+  - {name: Tavus, ats: ashby, slug: tavus}                             # (chat)
+  - {name: Odyssey, ats: ashby, slug: odysseyml}                       # (chat)
+  - {name: Eventual, ats: ashby, slug: eventualcomputing}              # (chat)
+  - {name: fal, ats: ashby, slug: fal-ai}                              # (chat)
+  - {name: Reka, ats: ashby, slug: reka}                               # (chat)
+  - {name: Cartesia, ats: ashby, slug: cartesia}                       # (chat)
+  - {name: ElevenLabs, ats: ashby, slug: ElevenLabs}                   # (chat)
+  - {name: Hume AI, ats: ashby, slug: hume-ai}                         # (chat)
+  - {name: Meshy, ats: auto, slug: meshy}                              # (chat: both greenhouse and ashby seen)
+  - {name: Genies, ats: greenhouse, slug: genies}                      # (chat)
+  - {name: Luma AI, ats: auto, slug: lumaai}
+  - {name: Captions, ats: auto, slug: captions}
+  # data / evals / infra
+  - {name: Scale AI, ats: greenhouse, slug: scaleai}                   # (chat)
+  - {name: Snorkel AI, ats: greenhouse, slug: snorkelai}               # (chat)
+  - {name: Labelbox, ats: greenhouse, slug: labelbox}                  # (chat)
+  - {name: Encord, ats: ashby, slug: encord}                           # (chat)
+  - {name: DatologyAI, ats: ashby, slug: datologyai}                   # (chat)
+  - {name: Roboflow, ats: ashby, slug: roboflow}                       # (chat)
+  - {name: Sieve, ats: ashby, slug: sieve}                             # (chat)
+  - {name: Modal, ats: ashby, slug: modal}                             # (chat)
+  - {name: Prime Intellect, ats: ashby, slug: primeintellect}          # (chat)
+  - {name: Together AI, ats: greenhouse, slug: togetherai}
+  - {name: Fireworks AI, ats: ashby, slug: fireworks}
+  - {name: Baseten, ats: auto, slug: baseten}
+  - {name: Anysphere, ats: ashby, slug: cursor}
+  # robotics / physical AI
+  - {name: Skild AI, ats: greenhouse, slug: skildai-careers}           # (chat)
+  - {name: Figure, ats: greenhouse, slug: figureai}                    # (chat)
+  - {name: Apptronik, ats: greenhouse, slug: apptronik}                # (chat)
+  - {name: Genesis, ats: ashby, slug: genesis}                         # (chat)
+  - {name: Generalist, ats: auto, slug: generalistai}                  # (chat: generalistai / generalist seen)
+  - {name: Menlo, ats: ashby, slug: menlo}                             # (chat)
+  - {name: Dexterity, ats: lever, slug: dexterity}                     # (chat)
+  - {name: Bedrock Robotics, ats: ashby, slug: bedrock-robotics}       # (chat)
+  - {name: Field AI, ats: lever, slug: field-ai}                       # (chat)
+  - {name: Path Robotics, ats: greenhouse, slug: pathrobotics}         # (chat)
+  - {name: Toyota Research Institute, ats: lever, slug: tri}           # (chat)
+  - {name: Mecka, ats: ashby, slug: mecka.ai}                          # (chat)
+  - {name: Medra, ats: ashby, slug: medraai}                           # (chat)
+  - {name: Monarch Tractor, ats: ashby, slug: monarchcrops}            # (chat)
+  - {name: Bobyard, ats: ashby, slug: bobyard}                         # (chat)
+  - {name: Gather AI, ats: greenhouse, slug: gatherai}                 # (chat)
+  - {name: 1X, ats: ashby, slug: 1x}
+  # autonomous driving
+  - {name: Applied Intuition, ats: ashby, slug: applied}               # (chat)
+  - {name: Wayve, ats: greenhouse, slug: wayve}                        # (chat)
+  - {name: Waabi, ats: lever, slug: waabi}                             # (chat)
+  - {name: Kodiak, ats: greenhouse, slug: kodiak}                      # (chat)
+  - {name: Torc Robotics, ats: greenhouse, slug: torcrobotics}         # (chat)
+  - {name: Motional, ats: greenhouse, slug: motional}                  # (chat)
+  - {name: Avride, ats: greenhouse, slug: avride}                      # (chat)
+  - {name: Stack AV, ats: greenhouse, slug: stackav}                   # (chat)
+  - {name: May Mobility, ats: greenhouse, slug: maymobility}           # (chat)
+  - {name: Gatik, ats: greenhouse, slug: gatikaiinc}                   # (chat)
+  - {name: Bot Auto, ats: greenhouse, slug: botauto}                   # (chat)
+  - {name: Helm.ai, ats: ashby, slug: helm-ai}                         # (chat)
+  - {name: WeRide, ats: lever, slug: weride}                           # (chat)
+  - {name: Lucid, ats: greenhouse, slug: lucidmotors}                  # (chat)
+  - {name: Zoox, ats: lever, slug: zoox}
+  - {name: Aurora, ats: ashby, slug: aurora-operations-inc}
+  - {name: Waymo, ats: auto, slug: waymo}
+  - {name: Nuro, ats: auto, slug: nuro}
+  # 3D / spatial
+  - {name: Niantic Spatial, ats: ashby, slug: niantic-spatial}         # (chat)
+  - {name: Polycam, ats: greenhouse, slug: polycamcareers}             # (chat)
+  - {name: Cesium, ats: greenhouse, slug: cesium}                      # (chat)
+  # big tech with public boards
+  - {name: Databricks, ats: auto, slug: databricks}
+  - {name: Pinterest, ats: auto, slug: pinterest}
+  - {name: Roblox, ats: auto, slug: roblox}
